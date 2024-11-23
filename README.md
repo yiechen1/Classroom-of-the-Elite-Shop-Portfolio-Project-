@@ -12,6 +12,17 @@ This project is a front-end website showcasing Classroom of the Elite light nove
 - CSS (Bootstrap)
 - JavaScript
 
+## Other Skills Used
+- SEO (Keywords only)
+- Copywriting
+
+## Tools Used
+- Ahrefs Keyword Generator
+- ChatGPT (copywriting/SEO only)
+- Claude (Debugging/Code Refactoring)
+- VSCode
+- MDN Web Docs
+
 ## Preview
 ![Screenshot 2024-11-23 130112](https://github.com/user-attachments/assets/8cac2966-98bc-4658-ae6f-bc3c1860e954)
 
