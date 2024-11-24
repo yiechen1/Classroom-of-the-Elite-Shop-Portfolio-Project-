@@ -1,6 +1,7 @@
 # Classroom of the Elite Shop
 
 This project is a simple web shop interface for Classroom of the Elite light novels and manga. This is a Front-End Project.
+Here it is on CodePen to view: https://codepen.io/yiechen/pen/ZEgNegq
 
 ## Description
 This project is a Front-End Website showcasing Classroom of the Elite light novels and manga. It features:
