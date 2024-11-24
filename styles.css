@@ -1,190 +1,206 @@
 :root {
-    --nav-padding: 10px;
-    --mobile-font-size: 17px;
-    --desktop-padding: 70px;
-    --transition-speed: 0.3s;
-  }
-  
+  --nav-padding: 10px;
+  --mobile-font-size: 17px;
+  --desktop-padding: 70px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  padding-top: 70px;
+  padding-left: 10px;
+}
+
+p {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+#header-img {
+  width: 500px;
+  margin: 10px 0;
+}
+
+#vid-label {
+  font-size: 20px;
+  padding-bottom: 10px;
+  width: 50%;
+}
+
+.resize {
+  font-size: 25px;
+}
+
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  z-index: 9999;
+  padding: 10px 0;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+#submit {
+  border-color: gray;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  border-color: black;
+}
+
+.light-novel {
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.light-novel:hover {
+  width: 240px;
+}
+
+.manga-volume {
+  width: 220px;
+  transition: width 0.3s ease;
+}
+
+.manga-volume:hover {
+  width: 250px;
+}
+
+#spinoff {
+  margin-top: 10px;
+}
+
+#selling-point {
+  margin-top: 10px;
+  width: 750px;
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 600px) {
   body {
-    padding-top: 70px;
-    padding-left: 10px;
+    width: 95%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
   }
-  
-  p {
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-  }
-  
-  label {
-    font-size: 18px;
-    align-items: center;
-    margin-left: 8px;
-  }
-  
-  #header-img {
-    width: 500px;
-    margin: 10px 0;
-  }
-  
-  #vid-label {
-    font-size: 20px;
-    padding-bottom: 10px;
-    width: 50%;
-  }
-  
-  .resize {
-    font-size: 25px;
-  }
-  
-  
+
   #nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    z-index: 9999;
-    padding: 10px 0;
-  }
-  
-  .nav-link:hover {
-    color: #007bff;
-  }
-  
-  #submit {
-    border-color: gray;
-  }
-  
-  #submit:hover {
-    transform: scale(1.1);
-    border-color: black;
-  }
-  
-  .light-novel {
-    width: 220px;
-    transition: width 0.3s ease;
-    margin-bottom: 10px;
-  }
-  
-  .light-novel:hover {
-    width: 240px;
-  }
-  
-  .manga-volume {
-    width: 220px;
-    transition: width 0.3s ease;
-  }
-  
-  .manga-volume:hover {
-    width: 250px;
-  }
-  
-  #spinoff {
-    margin-top: 10px;
-  }
-  
-  #selling-point {
-    margin-top: 10px;
-    width: 750px;
+    padding: 10px;
     font-size: 17px;
   }
   
-  @media only screen and (max-width: 600px) {
-    body {
-      width: 95%;
-      min-height: 100vh;
-      margin: 0;
-      padding: 10px;
-    }
+  #selling-point {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  iframe {
+    width: 95%;
+  }
   
-    #nav-bar {
-      padding: 10px;
-      font-size: 17px;
-    }
-    
-    #selling-point {
-      width: 95%;
-      margin-top: 20px;
-    }
-  
-  
-    h1, h2, h3, h4, h5, h6 {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-  
-    iframe {
-      width: 95%;
-    }
-    
+  #light-novel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    width:130px;
+    margin-left:100px;
     #light-novel {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      text-align: center;
-      margin-bottom:10px;
-      width:130px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    width: 100%; /* Allow full width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+#light-novel > * { /* Adjust individual novels */
+    flex: 0 1 calc(50% - 20px); /* Two items per row */
+    box-sizing: border-box; /* Include padding/border in width */
+    max-width: calc(50% - 20px); /* Prevent items from exceeding half the container width */
+}
+
+}
+
+  #light-novel h2, #light-novel h5 {
+    margin-bottom: 20px;
+}
+
+  .light-novel:hover{
+    width:130px !important;
+    display:none;
+}
+
+
+  #header-img {
+    width: 95%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #vid-label {
+    width: 95%;
+    text-align: center;
+  }
+    .manga-volume {
+    width: 150px !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
   }
   
-    #light-novel h2, #light-novel h5 {
-      margin-bottom: 20px;
+  #header-img {
+    width: 70%;
+    max-width: 400px;
   }
   
-    .light-novel:hover{
-      width:130px !important;
-      display:none;
+  .light-novel {
+    width: 180px;
+    margin-bottom:10px;
   }
   
-  
-    #header-img {
-      width: 95%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto;
-    }
-  
-    #vid-label {
-      width: 95%;
-      text-align: center;
-    }
-      .manga-volume {
-      width: 150px !important;
-      display: block;
-      margin: 0 auto;
-    }
+  .light-novel:hover {
+    width: 200px;
   }
   
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    body {
-      padding: 20px;
-    }
-    
-    #header-img {
-      width: 70%;
-      max-width: 400px;
-    }
-    
-    .light-novel {
-      width: 180px;
-      margin-bottom:10px;
-    }
-    
-    .light-novel:hover {
-      width: 200px;
-    }
-    
-    #selling-point {
-      width: 90%;
-      margin-top: 25px;
-    }
-    
-    #nav-bar {
-      font-size: 16px;
-    }
-    
-    iframe {
-      width: 90%;
-    }
+  #selling-point {
+    width: 90%;
+    margin-top: 25px;
   }
+  
+  #nav-bar {
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 90%;
+  }
+}
