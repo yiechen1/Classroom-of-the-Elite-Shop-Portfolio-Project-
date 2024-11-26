@@ -37,7 +37,6 @@ label {
   font-size: 25px;
 }
 
-
 #nav-bar {
   position: fixed;
   top: 0;
@@ -108,7 +107,6 @@ label {
     margin-top: 20px;
   }
 
-
   h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     margin-top: 10px;
@@ -121,38 +119,27 @@ label {
   #light-novel {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; 
+    gap: 10px;
     text-align: center;
-    width:130px;
-    margin-left:100px;
-    #light-novel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    text-align: center;
-    width: 100%; /* Allow full width for the container */
-    margin: 0 auto; /* Center the container */
-}
+    margin: 0 auto;
+    width: 100%;
+  }
 
-#light-novel > * { /* Adjust individual novels */
-    flex: 0 1 calc(50% - 20px); /* Two items per row */
-    box-sizing: border-box; /* Include padding/border in width */
-    max-width: calc(50% - 20px); /* Prevent items from exceeding half the container width */
-}
-
-}
+  #light-novel > * {
+    flex: 1 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    box-sizing: border-box;
+  }
 
   #light-novel h2, #light-novel h5 {
     margin-bottom: 20px;
-}
+  }
 
-  .light-novel:hover{
-    width:130px !important;
-    display:none;
-}
-
+  .light-novel {
+    width: 100%;
+    transition: none;
+  }
 
   #header-img {
     width: 95%;
@@ -165,7 +152,8 @@ label {
     width: 95%;
     text-align: center;
   }
-    .manga-volume {
+
+  .manga-volume {
     width: 150px !important;
     display: block;
     margin: 0 auto;
@@ -184,7 +172,7 @@ label {
   
   .light-novel {
     width: 180px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
   
   .light-novel:hover {
