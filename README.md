@@ -28,7 +28,8 @@ This project is a Front-End Website showcasing Classroom of the Elite light nove
 ![Screenshot 2024-11-23 130112](https://github.com/user-attachments/assets/8cac2966-98bc-4658-ae6f-bc3c1860e954)
 
 ## Future Improvements
-- Add more features/products for display
+- Add more features/products for display (mainly manga, spinoffs, merchandise)
+- Edit Styling for Medium-Large Phones (376-600px)
 
 ## Credits
 - Images sourced from Seven Seas Entertainment
