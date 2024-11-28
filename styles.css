@@ -205,4 +205,10 @@ label {
   iframe {
     width: 90%;
   }
+    .manga-volume {
+    width: 180px;
+  }
+  .manga-volume:hover {
+    width: 210px;
+  }
 }
