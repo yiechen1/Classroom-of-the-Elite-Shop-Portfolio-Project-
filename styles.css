@@ -67,17 +67,17 @@ label {
 }
 
 .light-novel:hover {
-  width: 240px;
+  width: 230px;
 }
 
 .manga-volume {
-  width: 220px;
+  width: 210px;
   transition: width 0.3s ease;
   margin-bottom: 10px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
 }
 
 .manga-volume:hover {
-  width: 230px;
+  width: 220px;
 }
 
 #spinoff {
@@ -137,6 +137,13 @@ label {
     .manga-volume {
         margin-bottom: 20px;
         padding-bottom: 20px;
+        width: 170px !important;
+    }
+    .light-novel {
+      width: 170px !important;
+    }
+    .light-novel:hover, .manga-volume:hover {
+      width: 180px !important;
     }
 }
 
@@ -172,6 +179,12 @@ label {
         height: auto;
         aspect-ratio: 16/9;
     }
+    .manga-volume {
+      width: 160px;
+    }
+    .manga-volume:hover {
+      width: 190px;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -205,10 +218,28 @@ label {
   iframe {
     width: 90%;
   }
-    .manga-volume {
-    width: 180px;
+  .manga-volume {
+    width: 190px !important;
   }
   .manga-volume:hover {
-    width: 210px;
+    width: 210px !important;
   }
+}
+
+@media screen and (max-width: 2599px) {
+    .light-novel:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume {
+      width: 210px !important;
+    }
+
+    iframe {
+      width: 55%;
+    }
 }
