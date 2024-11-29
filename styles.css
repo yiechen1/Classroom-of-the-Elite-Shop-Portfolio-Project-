@@ -71,7 +71,7 @@ label {
 }
 
 .manga-volume {
-  width: 200px;
+  width: 220px;
   transition: width 0.3s ease;
   margin-bottom: 15px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
 }
