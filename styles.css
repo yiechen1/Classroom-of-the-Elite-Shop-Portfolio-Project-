@@ -73,11 +73,11 @@ label {
 .manga-volume {
   width: 220px;
   transition: width 0.3s ease;
-  margin-bottom: 15px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
+  margin-bottom: 10px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
 }
 
 .manga-volume:hover {
-  width: 240px;
+  width: 230px;
 }
 
 #spinoff {
