@@ -66,6 +66,7 @@ label {
     max-width: 100%;
     padding: 15px;
     margin: auto;
+    display: block;
 }
 
 #header {
