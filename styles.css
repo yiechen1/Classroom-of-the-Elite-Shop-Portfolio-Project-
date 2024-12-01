@@ -117,11 +117,11 @@ img, iframe {
     body {
         font-size: 15px;
         padding: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-      justify-content: center;
+        box-sizing: border-box; /* Prevent content from overflowing */
+        position: relative; /* Changed from fixed to relative */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        margin-left: 0; /* Ensures no unwanted margin */
+        margin-right: 0; /* Ensures no unwanted margin */
     }
     header {
         font-size: 20px;
@@ -167,12 +167,13 @@ img, iframe {
         width: 170px !important;
     }
     .light-novel {
-      width: 170px !important;
+        width: 170px !important;
     }
     .light-novel:hover, .manga-volume:hover {
-      width: 180px !important;
+        width: 180px !important;
     }
 }
+
 
 
 
