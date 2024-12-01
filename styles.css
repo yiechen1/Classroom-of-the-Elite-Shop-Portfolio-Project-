@@ -103,12 +103,12 @@ img, iframe {
 }
 
 #selling-point {
-   margin-top: 10px;
-   width: 90%;
-   font-size: 18px;
-  text-align: center !important;
-      margin-left: auto;
-  margin-right: auto;
+  width: 90%;
+  max-width: 750px; /* Prevents it from getting too wide */
+  font-size: 17px;
+  text-align: center; /* Centers text inside the container */
+  margin-left: auto; /* Automatically adjusts left margin */
+  margin-right: auto; /* Automatically adjusts right margin */
 }
 
 @media (max-width: 375px) {
