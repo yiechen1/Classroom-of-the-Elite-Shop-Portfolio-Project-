@@ -1,252 +1,223 @@
+/* Root variables */
 :root {
-  --nav-padding: 10px;
-  --mobile-font-size: 17px;
-  --desktop-padding: 70px;
-  --transition-speed: 0.3s;
+  --primary-spacing: 1rem;
+  --header-height: 60px;
+  --primary-transition: all 0.3s ease;
+  --container-width: 1200px;
 }
 
-html {
-  justify-content: center !important;
-  align-content: center !important;
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  position: relative;
 }
 
 body {
-  padding-top: 70px;
-  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  padding-top: calc(var(--header-height) + 1rem);
+  min-width: 320px; /* Minimum width for smallest devices */
 }
 
-p {
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
+/* Container wrapper */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-label {
-  font-size: 18px;
-  align-items: center;
-  margin-left: 8px;
-}
-
-#header-img {
-  width: 500px;
-  margin: 10px 0;
-}
-
-#vid-label {
-  font-size: 20px;
-  padding-bottom: 10px;
-  width: 50%;
-}
-
-.resize {
-  font-size: 25px;
-}
-
+/* Navigation */
 #nav-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: var(--header-height);
   background-color: #f8f9fa;
-  z-index: 9999;
-  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--primary-spacing);
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: var(--primary-transition);
+  font-size: 1rem;
 }
 
 .nav-link:hover {
   color: #007bff;
 }
 
-#submit {
-  border-color: gray;
+/* Header section */
+#header {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--primary-spacing);
 }
 
-#submit:hover {
-  transform: scale(1.1);
-  border-color: black;
+#header-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
 }
 
-.light-novel {
-  width: 220px;
-  transition: width 0.3s ease;
-  margin-bottom: 10px;
+.resize {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem 0;
 }
 
-.light-novel:hover {
-  width: 230px;
-}
-
-.manga-volume {
-  width: 220px;
-  transition: width 0.3s ease;
-  margin-bottom: 8px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
-}
-
-.manga-volume:hover {
-  width: 230px;
-}
-
-#spinoff {
-  margin-top: 10px;
-}
-
+/* Selling point section */
 #selling-point {
-  margin-top: 10px;
-  width: 750px;
-  font-size: 17px;
+  width: 100%;
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 0 var(--primary-spacing);
+  font-size: 1rem;
+  text-align: justify;
 }
 
-
-@media (max-width: 375px) { 
-    body {
-        display: flex;
-        font-size: 15px;
-        padding: 10px;
-        justify-content: center;
-    }
-    header {
-        font-size: 20px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    .content {
-        margin: 10px 0;
-    }
-    .button {
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-    }
-    iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-    #header-img {
-        width: 100%;
-        height: auto;
-        margin-top: 100px;
-        display: block;
-        object-fit: cover;
-    }
-    #manga-spinoffs {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .manga-volume {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        width: 170px !important;
-    }
-    .light-novel {
-      width: 170px !important;
-    }
-    .light-novel:hover, .manga-volume:hover {
-      width: 180px !important;
-    }
+/* Video section */
+#vid-label {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-
-
-@media (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    header {
-        font-size: 22px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .content {
-        margin: 15px 0;
-    }
-    .button {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-    }
-    iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-    .manga-volume {
-      width: 160px;
-    }
-    .manga-volume:hover {
-      width: 190px;
-    }
+iframe {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  display: block;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+/* Light Novel and Manga sections */
+#light-novel,
+#manga-spinoffs {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 2rem auto;
+  padding: 0 var(--primary-spacing);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.light-novel,
+.manga-volume {
+  width: 180px;
+  height: auto;
+  transition: var(--primary-transition);
+  cursor: pointer;
+}
+
+.light-novel:hover,
+.manga-volume:hover {
+  transform: scale(1.05);
+}
+
+h2, h4 {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+/* Form styles */
+#form {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0 var(--primary-spacing);
+}
+
+#submit-form {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  transition: var(--primary-transition);
+}
+
+#submit-form:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 120px;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .light-novel,
+  .manga-volume {
+    width: 140px;
+  }
+
+  #selling-point {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
   body {
-    padding: 20px;
+    padding-top: calc(var(--header-height) + 0.5rem);
   }
-  
-  #header-img {
-    width: 70%;
-    max-width: 400px;
+
+  .light-novel,
+  .manga-volume {
+    width: 120px;
   }
-  
-  .light-novel {
-    width: 180px;
-    margin-bottom: 10px;
+
+  .resize {
+    font-size: 1.25rem;
   }
-  
-  .light-novel:hover {
-    width: 200px;
+
+  #vid-label {
+    font-size: 1rem;
   }
   
   #selling-point {
-    width: 90%;
-    margin-top: 25px;
-  }
-  
-  #nav-bar {
-    font-size: 16px;
-  }
-  
-  iframe {
-    width: 90%;
-  }
-  .manga-volume {
-    width: 190px !important;
-  }
-  .manga-volume:hover {
-    width: 210px !important;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
   }
 }
 
-@media screen and (max-width: 2599px) {
-    .light-novel:hover {
-      width: 230px !important;
-    }
-    
-    .manga-volume:hover {
-      width: 230px !important;
-    }
-    
-    .manga-volume {
-      width: 210px !important;
-    }
-
-    iframe {
-      width: 55%;
-    }
+/* Image grid layout */
+#spinoff {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 var(--primary-spacing);
 }
