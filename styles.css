@@ -1,11 +1,93 @@
-/* General reset for margin, padding, and overflow */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    box-sizing: border-box;
+:root {
+  --nav-padding: 10px;
+  --mobile-font-size: 17px;
+  --desktop-padding: 70px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  padding-top: 70px;
+  padding-left: 10px;
+}
+
+p {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+#header-img {
+  width: 500px;
+  margin: 10px 0;
+}
+
+#vid-label {
+  font-size: 20px;
+  padding-bottom: 10px;
+  width: 50%;
+}
+
+.resize {
+  font-size: 25px;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  z-index: 9999;
+  padding: 10px 0;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+#submit {
+  border-color: gray;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  border-color: black;
+}
+
+.light-novel {
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.light-novel:hover {
+  width: 230px;
+}
+
+.manga-volume {
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 8px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
+}
+
+.manga-volume:hover {
+  width: 230px;
+}
+
+#spinoff {
+  margin-top: 10px;
+}
+
+#selling-point {
+  margin-top: 10px;
+  width: 750px;
+  font-size: 17px;
 }
 
 /* Adjusting body on mobile devices */
