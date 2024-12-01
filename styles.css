@@ -1,169 +1,127 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    text-align: center !important;
+:root {
+  --nav-padding: 10px;
+  --mobile-font-size: 17px;
+  --desktop-padding: 70px;
+  --transition-speed: 0.3s;
 }
 
 body {
-    padding-top: 70px;
-    padding-left: 10px;
+  padding-top: 70px;
+  padding-left: 10px;
 }
 
 p {
-    margin-left: 5px;
-    display: flex;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
 }
 
 label {
-    font-size: 18px;
-    align-items: center;
-    margin-left: 8px;
+  font-size: 18px;
+  align-items: center;
+  margin-left: 8px;
 }
 
 #header-img {
-    width: 500px;
-    margin: 10px 0;
+  width: 500px;
+  margin: 10px 0;
 }
 
 #vid-label {
-    font-size: 20px;
-    padding-bottom: 10px;
-    width: 50%;
+  font-size: 20px;
+  padding-bottom: 10px;
+  width: 50%;
 }
 
 .resize {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    z-index: 9999;
-    padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  z-index: 9999;
+  padding: 10px 0;
 }
 
 .nav-link:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 #submit {
-    border-color: gray;
+  border-color: gray;
 }
 
 #submit:hover {
-    transform: scale(1.1);
-    border-color: black;
-}
-
-.container {
-    max-width: 100%;
-    padding: 15px;
-    margin: auto;
-    display: block;
-}
-
-#header {
-    max-width: 100%;
-}
-
-img, iframe {
-    max-width: 100%;
-    height: auto;
+  transform: scale(1.1);
+  border-color: black;
 }
 
 .light-novel {
-    width: 220px;
-    transition: width 0.3s ease;
-    margin-bottom: 10px;
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .light-novel:hover {
-    width: 230px;
+  width: 230px;
 }
 
 .manga-volume {
-    width: 220px;
-    transition: width 0.3s ease;
-    margin-bottom: 8px;
+  width: 210px;
+  transition: width 0.3s ease;
+  margin-bottom: 10px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
 }
 
 .manga-volume:hover {
-    width: 230px;
+  width: 220px;
 }
 
 #spinoff {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #selling-point {
-  width: 90%;                    /* Keep the width relative */
-  max-width: 750px;              /* Limit to a max width */
-  font-size: 17px;               /* Set font size */
-  text-align: center;            /* Center text */
-  margin-left: auto;             /* Center element by auto margin */
-  margin-right: auto;            /* Center element by auto margin */
-  display: block;                /* Ensure it's treated as a block element for margin auto to work */
+  margin-top: 10px;
+  width: 750px;
+  font-size: 17px;
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 375px) { 
     body {
         font-size: 15px;
-        padding: 0 10px;
-        overflow-x: hidden;
+        padding: 10px;
     }
-
     header {
         font-size: 20px;
     }
-
-    #nav-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #f8f9fa;
-        z-index: 9999;
-        padding: 10px 0;
-        box-sizing: border-box;
-    }
-
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
-
     .content {
         margin: 10px 0;
     }
-
     .button {
         padding: 10px 20px;
         font-size: 15px;
     }
-
-
     img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
         height: auto;
     }
-
     iframe {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
     }
-
     #header-img {
         width: 100%;
         height: auto;
@@ -171,70 +129,117 @@ img, iframe {
         display: block;
         object-fit: cover;
     }
-
     #manga-spinoffs {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-
     .manga-volume {
         margin-bottom: 20px;
-        width: 170px; 
+        padding-bottom: 20px;
+        width: 170px !important;
     }
-
     .light-novel {
-        width: 170px;
+      width: 170px !important;
     }
-
     .light-novel:hover, .manga-volume:hover {
-        width: 180px;
+      width: 180px !important;
     }
 }
+
+
 
 @media (max-width: 600px) {
     body {
         font-size: 16px;
-        padding: 0 15px;
     }
-
     header {
         font-size: 22px;
     }
-
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
-
     .content {
         margin: 15px 0;
     }
-
     .button {
         padding: 12px 24px;
         font-size: 16px;
     }
-
     img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
         height: auto;
     }
-
     iframe {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
     }
-
     .manga-volume {
-        width: 160px;
+      width: 160px;
+    }
+    .manga-volume:hover {
+      width: 190px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+  
+  #header-img {
+    width: 70%;
+    max-width: 400px;
+  }
+  
+  .light-novel {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .light-novel:hover {
+    width: 200px;
+  }
+  
+  #selling-point {
+    width: 90%;
+    margin-top: 25px;
+  }
+  
+  #nav-bar {
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 90%;
+  }
+  .manga-volume {
+    width: 190px !important;
+  }
+  .manga-volume:hover {
+    width: 210px !important;
+  }
+}
+
+@media screen and (max-width: 2599px) {
+    .light-novel:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume {
+      width: 210px !important;
     }
 
-    .manga-volume:hover {
-        width: 190px;
+    iframe {
+      width: 55%;
     }
 }
