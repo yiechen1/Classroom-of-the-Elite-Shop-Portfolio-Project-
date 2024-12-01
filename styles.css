@@ -178,15 +178,15 @@ img, iframe {
 
     .manga-volume {
         margin-bottom: 20px;
-        width: 170px !important; /* Force images to be smaller */
+        width: 170px; /* Fixed size */
     }
 
     .light-novel {
-        width: 170px !important; /* Force images to be smaller */
+        width: 170px; /* Fixed size */
     }
 
     .light-novel:hover, .manga-volume:hover {
-        width: 180px !important; /* Slight increase on hover */
+        width: 180px; /* Slight increase on hover */
     }
 }
 
