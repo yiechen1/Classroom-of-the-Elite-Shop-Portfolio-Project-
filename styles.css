@@ -106,8 +106,8 @@ img, iframe {
    width: 90%;
    font-size: 18px;
   text-align: center !important;
-   display: flex;
-   justify-content: center;
+      margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 375px) {
