@@ -98,9 +98,10 @@ label {
 
 @media (max-width: 375px) { 
     body {
+        display: flex;
         font-size: 15px;
         padding: 10px;
-      width: 85% !important;
+        justify-content: center;
     }
     header {
         font-size: 20px;
