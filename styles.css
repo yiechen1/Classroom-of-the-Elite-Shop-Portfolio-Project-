@@ -106,8 +106,10 @@ img, iframe {
 #selling-point {
    margin-top: 10px;
    width: 90%;
-   font-size: 17px;
+   font-size: 18px;
   text-align: center !important;
+   display: flex;
+   justify-content: center;
 }
 
 @media (max-width: 375px) {
