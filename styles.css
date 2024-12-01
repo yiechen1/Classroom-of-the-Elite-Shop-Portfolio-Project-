@@ -1,201 +1,73 @@
-/* Root variables */
-:root {
-  --primary-spacing: 1rem;
-  --header-height: 60px;
-  --primary-transition: all 0.3s ease;
-  --container-width: 1200px;
-}
-
-/* Base styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  position: relative;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  padding-top: calc(var(--header-height) + 1rem);
-  min-width: 320px; /* Minimum width for smallest devices */
-}
-
-/* Container wrapper */
-.container {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Navigation */
-#nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 var(--primary-spacing);
-}
-
-.nav-link {
-  color: #333;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: var(--primary-transition);
-  font-size: 1rem;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
-
-/* Header section */
-#header {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--primary-spacing);
-}
-
-#header-img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 1rem auto;
-  display: block;
-}
-
-.resize {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-/* Selling point section */
-#selling-point {
-  width: 100%;
-  max-width: 750px;
-  margin: 2rem auto;
-  padding: 0 var(--primary-spacing);
-  font-size: 1rem;
-  text-align: justify;
-}
-
-/* Video section */
-#vid-label {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-iframe {
-  width: 100%;
-  max-width: 560px;
-  aspect-ratio: 16/9;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Light Novel and Manga sections */
-#light-novel,
-#manga-spinoffs {
-  width: 100%;
-  max-width: var(--container-width);
-  margin: 2rem auto;
-  padding: 0 var(--primary-spacing);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.light-novel,
-.manga-volume {
-  width: 180px;
-  height: auto;
-  transition: var(--primary-transition);
-  cursor: pointer;
-}
-
-.light-novel:hover,
-.manga-volume:hover {
-  transform: scale(1.05);
-}
-
-h2, h4 {
-  width: 100%;
-  margin: 2rem 0 1rem;
-  text-align: center;
-}
-
-/* Form styles */
-#form {
-  width: 100%;
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 0 var(--primary-spacing);
-}
-
-#submit-form {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem 2rem;
-  transition: var(--primary-transition);
-}
-
-#submit-form:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  :root {
-    --header-height: 120px;
-  }
-
-  #nav-bar {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-
-  .nav-link {
-    padding: 0.25rem 0.5rem;
-  }
-
-  .light-novel,
-  .manga-volume {
-    width: 140px;
-  }
-
-  #selling-point {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
+/* Extra small devices (below 375px) */
+@media (max-width: 374px) {
   body {
+    margin: 0 auto;
     padding-top: calc(var(--header-height) + 0.5rem);
   }
 
+  #header, 
+  #light-novel, 
+  #manga-spinoffs,
+  #merchandise,
+  #form {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
   .light-novel,
   .manga-volume {
-    width: 120px;
+    width: 100px;  /* Smaller images for very small screens */
+  }
+
+  #selling-point {
+    padding: 0 10px;
+    font-size: 0.85rem;
+  }
+
+  .resize {
+    font-size: 1.1rem;
+  }
+
+  #vid-label {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  iframe {
+    width: 95%;
+  }
+}
+
+/* Small devices (375px - 600px) */
+@media (min-width: 375px) and (max-width: 600px) {
+  body {
+    margin: 0 auto;
+    padding-top: calc(var(--header-height) + 0.5rem);
+  }
+
+  #header, 
+  #light-novel, 
+  #manga-spinoffs,
+  #merchandise,
+  #form {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .light-novel,
+  .manga-volume {
+    width: 130px;  /* Slightly larger images for 375px+ */
+  }
+
+  #selling-point {
+    padding: 0 15px;
+    font-size: 0.9rem;
   }
 
   .resize {
@@ -204,20 +76,59 @@ h2, h4 {
 
   #vid-label {
     font-size: 1rem;
+    width: 95%;
   }
-  
-  #selling-point {
-    width: calc(100% - 2rem);
-    margin: 1rem auto;
+
+  iframe {
+    width: 98%;
+  }
+
+  /* Improved spacing for form elements */
+  #form {
+    width: 90%;
+    max-width: none;
+  }
+
+  /* Better spacing for navigation */
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.95rem;
   }
 }
 
-/* Image grid layout */
-#spinoff {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0 var(--primary-spacing);
+/* Shared styles for both ranges */
+@media (max-width: 600px) {
+  #header-img {
+    width: 95%;
+    max-width: 450px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  /* Center images container */
+  #light-novel,
+  #manga-spinoffs,
+  #spinoff {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  /* Ensure form elements are properly sized */
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+  }
+
+  #submit-form {
+    width: 100%;
+    padding: 10px;
+  }
 }
