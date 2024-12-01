@@ -16,8 +16,6 @@ body {
 p {
     margin-left: 5px;
     display: flex;
-    align-items: center;
-    justify-content: center !important;
 }
 
 label {
