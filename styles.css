@@ -1,134 +1,183 @@
+/* Ensure the body takes full width */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container for all content */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
 /* Extra small devices (below 375px) */
 @media (max-width: 374px) {
-  body {
-    margin: 0 auto;
-    padding-top: calc(var(--header-height) + 0.5rem);
+  /* Header section */
+  #header {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  #header, 
-  #light-novel, 
-  #manga-spinoffs,
-  #merchandise,
-  #form {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
+  #header-img {
+    width: 90%;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  /* Fix navigation */
+  #nav-bar {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Center selling point text */
+  #selling-point {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Center video and label */
+  #vid-label {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  iframe {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Center light novels and manga sections */
+  #light-novel,
+  #manga-spinoffs,
+  #spinoff {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .light-novel,
   .manga-volume {
-    width: 100px;  /* Smaller images for very small screens */
+    width: 110px;
+    margin: 5px;
   }
 
-  #selling-point {
-    padding: 0 10px;
-    font-size: 0.85rem;
-  }
-
-  .resize {
-    font-size: 1.1rem;
-  }
-
-  #vid-label {
-    font-size: 0.9rem;
+  /* Center form */
+  #form {
     width: 90%;
-  }
-
-  iframe {
-    width: 95%;
+    margin: 2rem auto;
+    padding: 0;
   }
 }
 
 /* Small devices (375px - 600px) */
 @media (min-width: 375px) and (max-width: 600px) {
-  body {
-    margin: 0 auto;
-    padding-top: calc(var(--header-height) + 0.5rem);
+  /* Header section */
+  #header {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  #header, 
-  #light-novel, 
+  #header-img {
+    width: 90%;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  /* Center selling point text */
+  #selling-point {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* Center video and label */
+  #vid-label {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  iframe {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Center light novels and manga sections */
+  #light-novel,
   #manga-spinoffs,
-  #merchandise,
-  #form {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  #spinoff {
     width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .light-novel,
   .manga-volume {
-    width: 130px;  /* Slightly larger images for 375px+ */
+    width: 130px;
+    margin: 7px;
   }
 
-  #selling-point {
-    padding: 0 15px;
-    font-size: 0.9rem;
-  }
-
-  .resize {
-    font-size: 1.25rem;
-  }
-
-  #vid-label {
-    font-size: 1rem;
-    width: 95%;
-  }
-
-  iframe {
-    width: 98%;
-  }
-
-  /* Improved spacing for form elements */
+  /* Center form */
   #form {
     width: 90%;
-    max-width: none;
-  }
-
-  /* Better spacing for navigation */
-  .nav-link {
-    padding: 0.5rem;
-    font-size: 0.95rem;
+    margin: 2rem auto;
+    padding: 0;
   }
 }
 
 /* Shared styles for both ranges */
 @media (max-width: 600px) {
-  #header-img {
-    width: 95%;
-    max-width: 450px;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-  }
-
-  h4 {
-    font-size: 1.2rem;
+  /* Center all headings */
+  h2, h4 {
+    width: 100%;
+    text-align: center;
     margin: 1rem 0;
   }
 
-  /* Center images container */
-  #light-novel,
-  #manga-spinoffs,
-  #spinoff {
-    justify-content: center;
-    gap: 0.75rem;
+  /* Ensure all sections take full width */
+  section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
   }
 
-  /* Ensure form elements are properly sized */
-  input[type="email"] {
-    width: 100%;
-    padding: 8px;
+  /* Center all text content */
+  p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  #submit-form {
+  /* Fix any remaining alignment issues */
+  .resize {
     width: 100%;
-    padding: 10px;
+    text-align: center;
+    margin: 1rem auto;
   }
 }
