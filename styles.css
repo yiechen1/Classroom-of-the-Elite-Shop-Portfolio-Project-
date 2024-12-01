@@ -5,6 +5,11 @@
   --transition-speed: 0.3s;
 }
 
+html {
+  justify-content: center;
+  align-content: center;
+}
+
 body {
   padding-top: 70px;
   padding-left: 10px;
