@@ -114,41 +114,52 @@ img, iframe {
 
 
 @media (max-width: 375px) { 
+    html, body {
+        margin: 0; /* Ensure no margin on html and body */
+        padding: 0; /* Ensure no padding on html and body */
+        width: 100%; /* Prevent any overflow beyond 100% of the viewport */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     body {
         font-size: 15px;
-        padding: 10px;
-        box-sizing: border-box; /* Prevent content from overflowing */
-        position: relative; /* Changed from fixed to relative */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        margin-left: 0; /* Ensures no unwanted margin */
-        margin-right: 0; /* Ensures no unwanted margin */
+        padding: 0 10px; /* Add padding but avoid horizontal overflow */
+        box-sizing: border-box; /* Ensure padding doesn't overflow */
+        position: relative; /* Keep body relative for normal flow */
     }
+
     header {
         font-size: 20px;
     }
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
     }
+
     .content {
         margin: 10px 0;
     }
+
     .button {
         padding: 10px 20px;
         font-size: 15px;
     }
+
     img {
         display: block;
         margin: 0 auto;
-        max-width: 100%;
+        max-width: 100%; /* Ensure images are responsive */
         height: auto;
     }
+
     iframe {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
     }
+
     #header-img {
         width: 100%;
         height: auto;
@@ -156,64 +167,81 @@ img, iframe {
         display: block;
         object-fit: cover;
     }
+
     #manga-spinoffs {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
+
     .manga-volume {
         margin-bottom: 20px;
         padding-bottom: 20px;
-        width: 170px !important;
+        width: 170px !important; /* Force manga images to be smaller */
     }
+
     .light-novel {
-        width: 170px !important;
+        width: 170px !important; /* Force light novel images to be smaller */
     }
+
     .light-novel:hover, .manga-volume:hover {
-        width: 180px !important;
+        width: 180px !important; /* Slight increase on hover */
     }
 }
 
-
-
-
 @media (max-width: 600px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     body {
         font-size: 16px;
     }
+
     header {
         font-size: 22px;
     }
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
+
     .content {
         margin: 15px 0;
     }
+
     .button {
         padding: 12px 24px;
         font-size: 16px;
     }
+
     img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
         height: auto;
     }
+
     iframe {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
     }
+
     .manga-volume {
-      width: 160px;
+        width: 160px;
     }
+
     .manga-volume:hover {
-      width: 190px;
+        width: 190px;
     }
 }
+
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   body {
