@@ -1,183 +1,245 @@
-/* Ensure the body takes full width */
+:root {
+  --nav-padding: 10px;
+  --mobile-font-size: 17px;
+  --desktop-padding: 70px;
+  --transition-speed: 0.3s;
+}
+
 body {
+  padding-top: 70px;
+  padding-left: 10px;
+}
+
+p {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+#header-img {
+  width: 500px;
+  margin: 10px 0;
+}
+
+#vid-label {
+  font-size: 20px;
+  padding-bottom: 10px;
+  width: 50%;
+}
+
+.resize {
+  font-size: 25px;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  background-color: #f8f9fa;
+  z-index: 9999;
+  padding: 10px 0;
 }
 
-/* Container for all content */
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
+.nav-link:hover {
+  color: #007bff;
 }
 
-/* Extra small devices (below 375px) */
-@media (max-width: 374px) {
-  /* Header section */
-  #header {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #header-img {
-    width: 90%;
-    max-width: 100%;
-    margin: 1rem auto;
-  }
-
-  /* Fix navigation */
-  #nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Center selling point text */
-  #selling-point {
-    width: 90%;
-    margin: 1rem auto;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  /* Center video and label */
-  #vid-label {
-    width: 90%;
-    margin: 1rem auto;
-    text-align: center;
-  }
-
-  iframe {
-    width: 90%;
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* Center light novels and manga sections */
-  #light-novel,
-  #manga-spinoffs,
-  #spinoff {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .light-novel,
-  .manga-volume {
-    width: 110px;
-    margin: 5px;
-  }
-
-  /* Center form */
-  #form {
-    width: 90%;
-    margin: 2rem auto;
-    padding: 0;
-  }
+#submit {
+  border-color: gray;
 }
 
-/* Small devices (375px - 600px) */
-@media (min-width: 375px) and (max-width: 600px) {
-  /* Header section */
-  #header {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #header-img {
-    width: 90%;
-    max-width: 100%;
-    margin: 1rem auto;
-  }
-
-  /* Center selling point text */
-  #selling-point {
-    width: 90%;
-    margin: 1rem auto;
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  /* Center video and label */
-  #vid-label {
-    width: 90%;
-    margin: 1rem auto;
-    text-align: center;
-  }
-
-  iframe {
-    width: 90%;
-    margin: 0 auto;
-    display: block;
-  }
-
-  /* Center light novels and manga sections */
-  #light-novel,
-  #manga-spinoffs,
-  #spinoff {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .light-novel,
-  .manga-volume {
-    width: 130px;
-    margin: 7px;
-  }
-
-  /* Center form */
-  #form {
-    width: 90%;
-    margin: 2rem auto;
-    padding: 0;
-  }
+#submit:hover {
+  transform: scale(1.1);
+  border-color: black;
 }
 
-/* Shared styles for both ranges */
+.light-novel {
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.light-novel:hover {
+  width: 230px;
+}
+
+.manga-volume {
+  width: 220px;
+  transition: width 0.3s ease;
+  margin-bottom: 8px; /* Here is the fixed Manga Styling (Creating a gap vertically) */
+}
+
+.manga-volume:hover {
+  width: 230px;
+}
+
+#spinoff {
+  margin-top: 10px;
+}
+
+#selling-point {
+  margin-top: 10px;
+  width: 750px;
+  font-size: 17px;
+}
+
+
+@media (max-width: 375px) { 
+    body {
+        font-size: 15px;
+        padding: 10px;
+    }
+    header {
+        font-size: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .content {
+        margin: 10px 0;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    #header-img {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        display: block;
+        object-fit: cover;
+    }
+    #manga-spinoffs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .manga-volume {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        width: 170px !important;
+    }
+    .light-novel {
+      width: 170px !important;
+    }
+    .light-novel:hover, .manga-volume:hover {
+      width: 180px !important;
+    }
+}
+
+
+
 @media (max-width: 600px) {
-  /* Center all headings */
-  h2, h4 {
-    width: 100%;
-    text-align: center;
-    margin: 1rem 0;
-  }
+    body {
+        font-size: 16px;
+    }
+    header {
+        font-size: 22px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .content {
+        margin: 15px 0;
+    }
+    .button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    .manga-volume {
+      width: 160px;
+    }
+    .manga-volume:hover {
+      width: 190px;
+    }
+}
 
-  /* Ensure all sections take full width */
-  section {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
   }
+  
+  #header-img {
+    width: 70%;
+    max-width: 400px;
+  }
+  
+  .light-novel {
+    width: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .light-novel:hover {
+    width: 200px;
+  }
+  
+  #selling-point {
+    width: 90%;
+    margin-top: 25px;
+  }
+  
+  #nav-bar {
+    font-size: 16px;
+  }
+  
+  iframe {
+    width: 90%;
+  }
+  .manga-volume {
+    width: 190px !important;
+  }
+  .manga-volume:hover {
+    width: 210px !important;
+  }
+}
 
-  /* Center all text content */
-  p {
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media screen and (max-width: 2599px) {
+    .light-novel:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume:hover {
+      width: 230px !important;
+    }
+    
+    .manga-volume {
+      width: 210px !important;
+    }
 
-  /* Fix any remaining alignment issues */
-  .resize {
-    width: 100%;
-    text-align: center;
-    margin: 1rem auto;
-  }
+    iframe {
+      width: 55%;
+    }
 }
